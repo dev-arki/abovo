@@ -1,0 +1,13 @@
+# *[=============== TEXT FILES ===============]*
+* text=auto
+
+## *[=============== CODE FILES ===============]*
+Dockerfile text eol=lf
+LICENSE text eol=lf
+.editorconfig text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+
+# *[=============== BINARIES ===============]*
+*.png binary
+*.jpg binary

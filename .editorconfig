@@ -1,0 +1,6 @@
+# *[=============== SET NVIM TO MAKE ALL FILES HAVE LINUX LINE ENDINGS ===============]*
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
