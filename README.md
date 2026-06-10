@@ -18,6 +18,8 @@ Modern development environments often suffer from:
 * Pinned container base image. ✅
 * Support for Visual Studio Code Dev Containers. ✅
 * Arch Linux-based development environment. ✅
+* Conditional build based in desired IDE. ✅
+* Neovim support. ✅
 
 ### 🎯 Planned
 * Neovim-first workflow support. 🔜
@@ -28,25 +30,45 @@ Modern development environments often suffer from:
 ## 📋Requirements
 * 📦 [Git](https://git-scm.com/)
 * 🐋 [Docker](https://www.docker.com/)
-* 🧩 [Visual Studio Code](https://code.visualstudio.com/)
-* 🔌 [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+* 🧩 [Visual Studio Code](https://code.visualstudio.com/) (*optional*)
+* 🔌 [Dev Containers extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) (*optional*)
 
 ---
 ## ⚡ Getting Started
+### VS Code (Dev Containers Workflow)
+The configuration targets the `vdev` multi-stage build, which initializes the core Arch Linux base image.
+1. Clone the repository:
 ```bash
 git clone https://github.com/dev-arki/abovo
 cd abovo
 ```
-Open the repository in Visual Studio Code and select:
+2. Open the repository in Visual Studio Code and select:
 ```
 Dev Containers: Reopen in Container
 ```
 The development environment will be built automatically.
 
+### Neovim (Docker CLI Workflow)
+The standard Docker build pipeline targets the `ndev` stage by default, executing the package manager routines to provision Neovim on top of the base Arch Linux image.
+1. Clone the repository:
+```bash
+git clone https://github.com/dev-arki/abovo
+cd abovo
+```
+2. Build the development container image:
+```bash
+docker build -t abovo .
+```
+3. Instantiate and attach to the container interactively:
+```bash
+docker run -it --rm abovo bash
+```
+
 ---
 ## 🧪 Project Status
-**Current phase:** Bootstrap.
-The project is under active development and should be considered experimental. Interfaces, configuration formats, and implementation details may change without notice until a stable release is published.
+**Current Phase:** Active (VsCode + Neovim Integration)
+
+The core multi-stage containerization infrastructure (`vdev` and `ndev` environments) is operational. Development workflows for both Visual Studio Code and Neovim layers are structurally defined. Architecture and codebase integration are progressing actively; APIs and configuration layouts remain subject to modification prior to version stability.
 
 ---
 ## 📖 Documentation

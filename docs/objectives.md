@@ -29,13 +29,21 @@ The GPLv3 was chosen deliberately to ensure that improvements to **Abovo** remai
 ---
 
 ## Phases
-### Phase 1 — Bootstrap *(current)*
+### Phase 1 — Bootstrap
 - Establish a deterministic, minimal container definition.
 - Validate Dev Container integration end-to-end.
 - Keep complexity low: no profiles, no installer, no preference layer.
 
 **Dependencies:** Git, Docker, VSCode, Dev Container Extension.
 
-### Phase 2 — VsCode + Neovim Integration
+### Phase 2 — VsCode + Neovim Integration (*current*)
 - Add Multi-Stage build behaviour.
 - Add Neovim support at parity with VS Code.
+
+**Dependencies:** Git, Docker, VSCode (*optional*), Dev Container Extension (*optional*).
+
+### Phase 3 — Non-root user setup 
+- Remove root-based workflow.
+- Ensure files created in the environment are owned by the correct user.
+
+**Dependencies:** Git, Docker, VSCode (*optional*), Dev Container Extension (*optional*).
