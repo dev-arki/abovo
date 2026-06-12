@@ -36,14 +36,20 @@ The GPLv3 was chosen deliberately to ensure that improvements to **Abovo** remai
 
 **Dependencies:** Git, Docker, VSCode, Dev Container Extension.
 
-### Phase 2 — VsCode + Neovim Integration (*current*)
+### Phase 2 — VsCode + Neovim Integration
 - Add Multi-Stage build behaviour.
 - Add Neovim support at parity with VS Code.
 
 **Dependencies:** Git, Docker, VSCode (*optional*), Dev Container Extension (*optional*).
 
-### Phase 3 — Non-root user setup 
+### Phase 3 — Non-root user setup (*current*) 
 - Remove root-based workflow.
 - Ensure files created in the environment are owned by the correct user.
+
+**Dependencies:** Git, Docker, VSCode (*optional*), Dev Container Extension (*optional*).
+
+### Phase 4 — Preference injection layer setup
+- Add build arguments for container customization support.
+- Define architectural protocol for container customization setup and injection.
 
 **Dependencies:** Git, Docker, VSCode (*optional*), Dev Container Extension (*optional*).
